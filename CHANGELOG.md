@@ -1,0 +1,78 @@
+# Changelog
+
+## V 1.0.0
+
+### ADD
+
+- Http server
+  - Http server based on express
+  - Http controller
+    - @HttpController({route: '', method: '', middlewares: []})
+    - @HttpControllerGroup({prefix: '', middlewares: []})
+    - with HttpClient
+  - Http middleware
+    - handle function with HttpRequest and next function
+    - with HttpClient passed in before handle
+  - Http request
+    - external
+    - body
+    - query
+    - respond(data, statusCode)
+    - respondWithHeader(data, statusCode, headers)
+    - getParam(name)
+    - getQuery(name)
+    - getHeader(name)
+    - getExpressRequest()
+    - getExpressResponse()
+  - Http client
+    - session management
+      - getSession()
+      - setSession(data)
+  - Http server
+    - start(port, host)
+    - stop()
+    - useMiddleware(middleware)
+    - useExpressMiddleware(expressMiddleware)
+    - getApp()
+    - registerController(controller)
+    - registerControllers(controllers)
+- Websocket server
+  - Websocket server based on ws
+  - WS controller
+    - @WSController({event: '', middlewares: []})
+    - @WSControllerGroup({prefix: '', middlewares: []})
+    - with WSClient
+  - WS middleware
+    - handle function with WSRequest and next function
+    - with WSClient passed in before handle
+  - WS request
+    - external
+    - data
+    - respond(data)
+  - WS client
+    - saveInSession(data)
+    - getFromSession()
+    - joinRoom(roomName)
+    - leaveRoom(roomName)
+    - broadcast(roomName, event, data)
+    - send(event, data)
+  - WS server
+    - static fromHttpServer(httpServer)
+    - static fromScratch(port, host)
+    - start()
+    - stop()
+    - useMiddleware(middleware)
+    - registerController(controller)
+    - registerControllers(controllers)
+    - broadcast(roomName, event, data)
+    - removeClient(client)
+- Service
+  - Service request
+    - parameters
+    - error
+    - errors
+    - response
+  - Service error
+    - code
+    - infos
+    - data
