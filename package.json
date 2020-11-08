@@ -1,6 +1,6 @@
 {
     "name": "@smallprod/backessentials",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Back end essentials resources",
     "main": "dist/index.js",
     "repository": "https://github.com/ApierBySmallProd/NodeBackEssentials.git",
