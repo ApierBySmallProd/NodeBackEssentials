@@ -1,7 +1,7 @@
-import WSClient from "./websocket.client";
+import WSClient from './websocket.client';
 
 export default class BaseWSController {
-  protected client: WSClient;
+  public client: WSClient;
 
   public constructor(client: WSClient) {
     this.client = client;
