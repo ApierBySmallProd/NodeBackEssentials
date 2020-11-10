@@ -9,7 +9,7 @@ export default class HttpClient {
 
   public getSession = (): any => {
     if (this.expressRequest.session) {
-      return this.expressRequest.session.session;
+      return this.expressRequest.session.session || {};
     }
     console.error('Session not available! Please use a middleware to enable it!');
     return null;
